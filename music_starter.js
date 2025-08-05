@@ -19,7 +19,7 @@ ellipse(vocalPos,midY/2,50,50);
 ellipse(vocalPos+400,midY/2,50,50);
 ellipse(vocalPos+800,midY/2,50,50);
 
-stroke(90,150,60);
+stroke(100,150,60);
 strokeWeight(10);
 fill(200,345,60)
 ellipse(ellipsePos+200,midY/8,50,50);
