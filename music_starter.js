@@ -32,16 +32,30 @@ for (var i = 0; i < 200; i++) {
 stroke(100,150,60);
 strokeWeight(3);
 fill(200,345,60);
-ellipse(-400,midY/24+vocal*9,drum/8,drum/8);
-ellipse(-500,midY/24+vocal*8,drum/4,drum/4);
-ellipse(-600,midY/24+vocal*7,drum/2,drum/2);
+ellipse(-400,midY/250+vocal*6,drum/8,drum/8);
+ellipse(-500,midY/250+vocal*5,drum/4,drum/4);
+ellipse(-600,midY/250+vocal*4,drum/2,drum/2);
+
+stroke(100,150,60);
+strokeWeight(3);
+fill(200,345,60);
+ellipse(-400,midY/250-vocal*6,drum/8,drum/8);
+ellipse(-500,midY/250-vocal*5,drum/4,drum/4);
+ellipse(-600,midY/250-vocal*4,drum/2,drum/2);
 
 stroke(100,150,60);
 strokeWeight(3);
 fill(200,345,60)
-ellipse(ellipsePos-50,midY/24+vocal*9,drum/8,drum/8);
-ellipse(ellipsePos+50,midY/24+vocal*8,drum/4,drum/4);
-ellipse(ellipsePos+150,midY/24+vocal*7,drum/2,drum/2);
+ellipse(ellipsePos-50,midY/250+vocal*6,drum/8,drum/8);
+ellipse(ellipsePos+50,midY/250+vocal*5,drum/4,drum/4);
+ellipse(ellipsePos+150,midY/250+vocal*4,drum/2,drum/2);
+
+stroke(100,150,60);
+strokeWeight(3);
+fill(200,345,60)
+ellipse(ellipsePos-50,midY/250-vocal*6,drum/8,drum/8);
+ellipse(ellipsePos+50,midY/250-vocal*5,drum/4,drum/4);
+ellipse(ellipsePos+150,midY/250-vocal*4,drum/2,drum/2);
 
 //text
 stroke(255,255,255);
