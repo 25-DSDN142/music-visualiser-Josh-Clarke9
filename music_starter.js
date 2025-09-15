@@ -7,11 +7,11 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 rectMode (CENTER);
 angleMode (DEGREES);
 let midX = canvasWidth/2
-let midY = canvasWidth/2
+let midY = canvasWidth
 
 //MAPS
-let ellipsePos = map(drum,0,100,200,450)
-let vocalPos = map(vocal,0,100,200,450)
+let ellipsePos = map(drum,0,300,400,650)
+let vocalPos = map(vocal,0,300,800,650)
 
 //animation
 stroke(154,205,50);
@@ -29,29 +29,28 @@ for (var i = 0; i < 200; i++) {
 }
 
 //drawings
-{push()
-rotate(sin(frameCount + i * 4) * 100)
 stroke(100,150,60);
-strokeWeight(5);
+strokeWeight(3);
 fill(200,345,60);
-ellipse(vocalPos-800,midY/12,bass,bass);
-ellipse(vocalPos-400,midY/12,bass,bass);
-ellipse(vocalPos,midY/12,bass,bass);
+ellipse(-400,midY/24+vocal*9,drum/8,drum/8);
+ellipse(-500,midY/24+vocal*8,drum/4,drum/4);
+ellipse(-600,midY/24+vocal*7,drum/2,drum/2);
 
 stroke(100,150,60);
-strokeWeight(5);
+strokeWeight(3);
 fill(200,345,60)
-ellipse(ellipsePos-400,midY/24,drum,drum);
-ellipse(ellipsePos-400,midY/12,drum,drum);
-ellipse(ellipsePos-400,midY/6,drum,drum);
-pop()}
-   stroke(100,150,60);
-   strokeWeight(3);
-   fill(154,205,50);
-   textFont('Impact'); // please use CSS safe fonts
-   rectMode(CENTER)
-   textSize(8);
-    textAlign(CENTER);
-    textSize(vocal/2);
-    text(words, 0, + 330);
+ellipse(ellipsePos-50,midY/24+vocal*9,drum/8,drum/8);
+ellipse(ellipsePos+50,midY/24+vocal*8,drum/4,drum/4);
+ellipse(ellipsePos+150,midY/24+vocal*7,drum/2,drum/2);
+
+//text
+stroke(255,255,255);
+strokeWeight(3);
+fill(10,20,30);
+textFont('Impact'); // please use CSS safe fonts
+rectMode(CENTER)
+textSize(8);
+textAlign(CENTER);
+textSize(vocal/2);
+text(words, 0, + 330);
 }
